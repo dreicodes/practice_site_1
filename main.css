@@ -1,0 +1,275 @@
+html {
+    background-color: #f1f1f1;
+    box-sizing: box-content;
+    color: #0b0c10;
+    font: 62.5%/1.2 "Montserrat", sans-serif;
+    scroll-behavior: smooth;
+  }
+
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+body {
+    font-size: 1.6em;
+    margin: 0;
+  }
+
+.container {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+section {
+    padding: 2em 0;
+  }
+
+h2 {
+    font: 2.5em "Bebas Neue", sans-serif;
+    letter-spacing: .05em;
+    margin: 0;
+    margin-bottom: 1em;
+    padding: .1em 0;
+    text-align: center;
+}
+  
+ul, h1, p {
+    margin: 0;
+    padding: 0;
+}
+  
+.btn a, button {
+    font-weight: bold;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  
+a {
+    color: #66fcf1;
+    text-decoration: none;
+    transition: all linear .3s;
+  }
+  
+.btn-dark, .btn-light {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: all linear .3s;
+  }
+  
+.btn-dark {
+    background-color: #0b0c10;
+    color: #66fcf1;
+  }
+
+.btn-dark:hover  {
+    background-color: #66fcf1;
+    color: #0b0c10;
+}
+  
+.btn-light {
+    background-color: #66fcf1;
+    border: 1.5px solid #66fcf1;
+    color: #0b0c10;
+  }
+
+.btn-light:hover {
+    border: 1.5px solid #66fcf1;
+    background-color: #0b0c10;
+    color: #f1f1f1;
+}
+  
+
+/* header */
+header {
+    background: linear-gradient(to top right, rgba(40, 99, 95, .6), rgba(4, 5, 6, .9)),
+    url(https://images.unsplash.com/photo-1579103805048-54c1d7823a9d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1520&q=80) no-repeat center;
+    background-size: cover;
+    padding: 1.5em;
+}
+
+.header-grid {
+    display: grid;
+    grid-template-rows: 60px 1fr;
+        align-items: center;
+        justify-items: center;
+    min-height: 100vh;
+}
+
+.main-header {
+    display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    grid-row: 1 / 2;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.main-header > * {
+    flex-basis: 100%;
+}
+
+.main-header #branding {
+    color: #66fcf1;
+    margin-bottom: .5em;
+}
+
+.main-header nav li {
+    display: inline-block;
+    list-style: none;
+}
+
+.main-header nav .social {
+    display: none;
+}
+
+.main-header a {
+    padding: .5em;
+}
+
+.main-header a:hover {
+    color: #f1f1f1;
+    text-decoration: underline;
+}
+
+.hero {
+    color: #f1f1f1;
+    grid-row: 2 / 3;
+    text-align: center;
+}
+
+.hero p {
+    margin: 15px 0 40px 0;
+}
+
+/* services */
+.services-items {
+    display: grid; 
+    gap: 1.5em;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    justify-items: center;
+    margin: auto;
+    margin-bottom: 1.5em;
+    width: 80%;
+    max-width: 100%;
+}
+  
+.services-items div{
+    background-color: #0b0c10;
+    color: #f1f1f1;
+    padding: 2em;
+    text-align: center;
+}
+  
+.services-items i {
+    color: #66fcf1;
+    font-size: 3.5em;
+    padding-bottom: .5em;
+}
+
+/* contact */
+#contact {
+    background-color: #0b0c10;
+    color: #66fcf1;
+    text-align: center;
+}
+  
+#contact .container {
+    margin: 0 auto;
+    width: 90%;
+}
+  
+#contact .info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+  
+#contact input {
+    font-family: inherit;
+    margin: .5em auto;
+    padding: .5em;
+    flex-basis: 100%;
+}
+  
+#contact p {
+    margin-top: .5em;
+}
+  
+#contact textarea {
+    margin: .5em 0 ;
+    width: 100%;
+}
+
+#contact button {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* footer */
+footer {
+    background-color: #0b0c10;
+    border-top: 1.5px solid #66fcf1;
+    color: #f1f1f1;
+    padding: 1.5em;
+    text-align: center;
+}
+
+/* media queries */
+@media screen and (min-width:720px) {
+    header {
+        font-size: 1.2em;
+        padding: .5em;
+    }
+
+    .container {
+        width: 85%;
+    }
+
+    .main-header {
+        flex-wrap: nowrap;
+        margin-bottom: 0;
+        text-align: initial;
+        width: 100%;
+    }
+
+    .main-header > * {
+        flex-basis: initial;
+    }
+
+    .main-header #branding {
+        display: flex;
+            align-items: center;
+        margin-bottom: 0;
+        margin-right: auto;
+    }
+
+    .main-header nav ul {
+        display: flex;
+            align-items: center;
+    }
+
+    .hero h1 {
+        font-size: 2.4em;
+    }
+
+    #contact form {
+        margin: 0 auto;
+        width: 70%;
+    }
+}
+
+@media screen and (min-width:840px) {
+    .services-items {
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+    }
+
+    
+    #contact form {
+        margin: 0 auto;
+        width: 60%;
+    }
+}
